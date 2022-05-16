@@ -1,12 +1,12 @@
 import './App.css';
 import { Routes, Route, Link } from "react-router-dom";
-import { About } from './pages/About/about';
-import Home from './pages/Home/home';
+import { About } from './pages/About/About';
+import Home from './pages/Home/Home';
 import logo from './image/Logo.png'
 import search from './image/Search.png'
 import favorite from './image/Favorite.png'
 import cart from './image/Cart.png'
-import { SignUp } from './pages/SignUp/singUp';
+import { SignUp } from './pages/SignUp/SingUp';
 
 
 function App() {

@@ -1,23 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route, Link } from "react-router-dom";
+import { About } from './pages/About/about';
+import Home from './pages/Home/home';
+import logo from './image/Logo.png'
+import search from './image/Search.png'
+import favorite from './image/Favorite.png'
+import cart from './image/Cart.png'
+import { SignUp } from './pages/SignUp/singUp';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='header'>
+        <nav className='navbar'>
+          <div className='logo'>
+            <img src={logo} alt="" />
+          </div>
+          <div className='nav'>
+            <Link to="/">Home</Link>
+            <Link to="/about">About</Link>
+            <Link to="/signUp">SignUp</Link>
+            <a href="#">Teams</a>
+            <a href="#">App</a>
+          </div>
+          <div className='icon'>
+            <img src={search} alt="" />
+            <img src={favorite} alt="" />
+            <img src={cart} alt="" />
+          </div>
+        </nav>
+        <div className="collaborators">
+          <p>Jersey</p>
+          <p>Nike & nba collaboration</p>
+        </div>
+      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/signUp" element={<SignUp/>} />
+
+        <Route path="*" element={<Home />} />
+      </Routes>
     </div>
   );
 }

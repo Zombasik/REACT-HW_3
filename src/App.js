@@ -6,7 +6,7 @@ import logo from './image/Logo.png'
 import search from './image/Search.png'
 import favorite from './image/Favorite.png'
 import cart from './image/Cart.png'
-import { SignUp } from './pages/SignUp/SingUp';
+import { SignUp } from './pages/SignUp/SignUp';
 
 
 function App() {
